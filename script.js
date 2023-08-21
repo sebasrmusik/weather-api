@@ -5,7 +5,7 @@ const inputField = document.querySelector('#city');
 const button = document.querySelector('#submit');
 
 const getWeather = async (city) => {
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=fd33c5279a794bcea13230935231808q=${city}&aqi=no`)
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=fd33c5279a794bcea13230935231808&q=${city}&aqi=no`)
     const data = await response.json();
     return filter(data);
 }
